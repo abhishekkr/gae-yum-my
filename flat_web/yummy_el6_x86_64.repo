@@ -1,0 +1,5 @@
+[yum-my-el6-x86_64]
+name=RHEL/CentOS-6 / x86_64 - Yum-My
+baseurl=http://yum-my.appspot.com/yummy/el6/x86_64
+enabled=1
+gpgcheck=0

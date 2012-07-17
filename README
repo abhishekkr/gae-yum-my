@@ -1,0 +1,27 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+G     A     E
+\\// || || ||\\//|| __ ||\\//|| \\//  your custom
+ ||  ||_|| ||    ||    ||    ||  ||    yum  repo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+how to make your own yum-my yum reposiotry using appengine
+
+$ git clone
+$ cd gae-yum-my
+$ mkdir yummy/<distro><releasever>/<basearch>
+$ cp <ALL_MY_RPMS_of__DISTRO_ReleaseVer_BaseArch> yummy/<distro><releasever>/<basearch>/
+$ createrepo yummy/<distro><releasever>/<basearch>/
+
+now, place a file 'flat_web/yum-my-el6<or-whichever>.repo' with content
+[yum-my-<distro><releasever>-<basearch>]
+name=Yum-My
+baseurl=http://YOURYUMMY.appspot.com/yummy/<distro>$releasever/$basearch
+enabled=1
+gpgcheck=0
+
+and can link this file on your 'flat_web/index.htm' homepage
+
+
+to host:
+$ google_appengine/appcfg.py update <yum-my_path>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

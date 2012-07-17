@@ -1,0 +1,56 @@
+<html>
+  <head>
+  	<title>yum-my</title>
+  </head>
+  <body>
+  	<h1>yum-my</h1>
+    <div id='floaters' style='float:right; font-weight:bold;'>
+      <img src='/flat_web/yummy.jpg'>
+      <div>
+        <a href='http://twitter.com/aBionic'>aBionic@twitter</a>,
+        <a href='https://github.com/abhishekkr'>abhishekkr@github</a>
+      </div>
+    </div>
+    <div id='repo'>
+      Save  in '/etc/yum.repos.d/'<br/><a href='/flat_web/yummy_el6_src.repo'>RHEL6, CentOS-6.x SRC YUM Repo</a><br/><a href='/flat_web/yummy_el6_x86_64.repo'>RHEL6, CentOS-6.x x86_64 YUM Repo</a>
+      <blockquote>
+        [yum-my-el$releasever-x86_64]<br/>
+        name=RHEL/CentOS-5 / x86_64 - Yum-My<br/>
+        baseurl=http://&lt;&lt;MY_GAE_APP&gt;&gt;.appspot.com/yummy/el$releasever/x86_64<br/>
+        enabled=1<br/>
+        gpgcheck=0<br/>
+      </blockquote>
+      <br/>then,<br/>
+      <blockquote>
+        $ yum repolist
+      </blockquote>
+    </div>
+    <div id='rpms'>main RPMs for RedHat EL 6 SRC based distros:
+      <ul>
+        <li>
+          <a href='/yummy/el6/src/gae-flat-web-0.0.1-1.src.rpm'>Google AppE Flat Web</a>
+        </li>
+      </ul>
+    </div>
+    <div id='rpms'>main RPMs for RedHat EL 6 x86_64 based distros:
+      <ul>
+        <li>
+          <a href='/yummy/el6/x86_64/gae-flat-web-0.0.1-1.x86_64.rpm'>Google AppE Flat Web</a>
+        </li>
+      </ul>
+    </div>
+    <div style="float:bottom; margin-bottom:5px;">
+      <div>create your own personal yum repository:
+        <a onclick='this.innerHTML="W.I.P.";' href=''>HowTo tutorial</a>
+      </div>
+      <div>created by using
+        <a href="https://github.com/abhishekkr/gae-flat-web"> https://github.com/abhishekkr/gae-flat-web </a>
+      </div>
+      <div>Your own
+        <a href='http://gae-flat-web.appspot.com'>Static Content Website</a>
+        served by
+        <a href='http://appengine.google.com'>Google AppEngine</a>
+      </div>
+    </div>
+  </body>
+</html>
